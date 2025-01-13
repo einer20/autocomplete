@@ -15,6 +15,7 @@ var react_1 = require("react");
 var Autocomplete_1 = require("./autocomplete/Autocomplete");
 require("./app.css");
 var countries_1 = require("./data/countries");
+var ApiExample_1 = require("./ApiExample");
 function App() {
     var _a = react_1.useState({
         closeResultsOnSelection: false,
@@ -38,6 +39,7 @@ function App() {
             react_1["default"].createElement("h3", null, "Simple with onChange event"),
             react_1["default"].createElement(Autocomplete_1["default"], { items: countries_1.countries, label: 'Countries', clearOnScape: options.clearOnScape, closeOnNavigationSelection: options.closeResultsOnSelection, onChange: function (x) {
                     alert("selected item " + JSON.stringify(x));
-                }, getLabel: function (x) { return x.name; } }))));
+                }, getLabel: function (x) { return x.name; } })),
+        react_1["default"].createElement(ApiExample_1["default"], null)));
 }
 exports["default"] = App;

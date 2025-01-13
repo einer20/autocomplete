@@ -149,7 +149,7 @@ function Autocomplete(props) {
         react_1["default"].createElement("div", { className: "autocomplete " + getExtraClasses() },
             react_1["default"].createElement("label", null, label),
             react_1["default"].createElement("div", { className: "input" },
-                react_1["default"].createElement("input", { type: "text", onClick: onInputClick, onChange: onInputChange, onKeyDown: onNavigationKeysPressed, value: userInput })),
+                react_1["default"].createElement("input", { placeholder: isLoading ? "Loading..." : "Type to search", disabled: isLoading, type: "text", onClick: onInputClick, onChange: onInputChange, onKeyDown: onNavigationKeysPressed, value: userInput })),
             isOpen &&
                 react_1["default"].createElement(ResultList_1["default"], __assign({}, props, { items: items, input: userInput, onSelect: onSelect }))));
 }

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Autocomplete from './autocomplete/Autocomplete';
 import './app.css';
 import { countries } from './data/countries';
+import useGetQuery from './api/useGetQuery';
+import ApiExample from './ApiExample';
 
 function App() {
 
@@ -9,6 +11,8 @@ function App() {
     closeResultsOnSelection: false,
     clearOnScape: false
   })
+
+
 
   return (
     <>
@@ -49,6 +53,7 @@ function App() {
           }}
           getLabel={x => x.name} />
       </div>
+      <ApiExample />
     </>
   );
 }

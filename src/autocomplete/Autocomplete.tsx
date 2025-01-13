@@ -131,7 +131,6 @@ export default function Autocomplete<TType>(props: AutocompleteProps<TType>) {
             items.at(newHightlightedIndex)!.hightlight = true;
         }
 
-
         setItems([...items]);
     }
 
@@ -155,7 +154,14 @@ export default function Autocomplete<TType>(props: AutocompleteProps<TType>) {
         <div className={`autocomplete ${getExtraClasses()}`}>
             <label>{label}</label>
             <div className="input">
-                <input type="text" onClick={onInputClick} onChange={onInputChange} onKeyDown={onNavigationKeysPressed} value={userInput} />
+                <input
+                    placeholder={isLoading ? "Loading..." : "Type to search"}
+                    disabled={isLoading}
+                    type="text"
+                    onClick={onInputClick}
+                    onChange={onInputChange}
+                    onKeyDown={onNavigationKeysPressed}
+                    value={userInput} />
             </div>
             {isOpen &&
                 <ResultList {...props} items={items} input={userInput} onSelect={onSelect} />
