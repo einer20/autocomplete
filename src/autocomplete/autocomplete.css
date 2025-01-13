@@ -1,0 +1,44 @@
+
+
+.autocomplete {
+    position: relative;
+}
+
+.autocomplete input {
+    padding: 4px;
+    border-radius: 4px;
+}
+
+/*
+ --- results
+*/
+.results { 
+    position: absolute;
+    left: 0px;
+    background: white;
+    box-shadow: 3px 4px 7px 0px #ccc;
+    padding: 4px;
+    max-width: 400px;
+    min-width: 300px;
+    border: solid 1px #e6e6e6;
+    z-index: 500;
+    max-height: 200px;
+    overflow: auto;
+}
+.results .item {
+    padding: 4px 6px;
+    user-select: none;
+    cursor: default;
+}
+.results .item:hover, .results .item.a11y-hightlight{
+    background: #e6e6e6
+}
+.results .item:active{
+    background:#dedede
+}
+.results .hightlighted {
+    background: yellow
+}
+.results .not-found{
+    text-align: center;
+}
